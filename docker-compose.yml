@@ -1,0 +1,9 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5218:8080"  # Mapped to the AppUrl port in appsettings.json
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
